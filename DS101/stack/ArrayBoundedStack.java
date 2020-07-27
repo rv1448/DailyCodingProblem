@@ -20,7 +20,7 @@ import java.util.Arrays;
 public class ArrayBoundedStack<T> implements StackInterface<T> {
    public T[] container;
    private int top;
-
+  // private final int DECAP = 100;
 
     public int size(){
         return container.length;
@@ -32,8 +32,8 @@ public class ArrayBoundedStack<T> implements StackInterface<T> {
    }
 
    public   ArrayBoundedStack() {
-       int DECAP = 100;
-       new ArrayBoundedStack(DECAP);
+
+       this(20);
    }
 
     public  void push(T element)   {
