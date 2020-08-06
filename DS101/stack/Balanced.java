@@ -28,7 +28,9 @@ public class Balanced {
         boolean isMatch = true;
         stack =  new ArrayBoundedStack<Integer>(expression.length());
 
-        while(startindex <= endindex && isMatch){
+        while(isMatch && startindex <= endindex ){
+            System.out.println(startindex);
+            System.out.println(isMatch);
             currentchar = expression.charAt(startindex);
             opensetindex = openSet.indexOf(currentchar);
             if(opensetindex != -1){
@@ -44,10 +46,13 @@ public class Balanced {
             }
             startindex++;
             System.out.println(stack);
+            System.out.println(isMatch);
+
+
         }
         // Iterate over the String every character
 
-        if(stack.isEmpty()) return 0;
+        if(isMatch) return 0;
         else if(!stack.isEmpty()) return 1;
         else return 2;
     }
@@ -105,14 +110,18 @@ public class Balanced {
 
          }
 
-        if(stack.isEmpty() && isMatch ==true) return 0;
+        if(!isMatch) return 2;
         else if(!stack.isEmpty()) return 1;
-        else return 2;
+        else return 0;
 
     }
     public static void main(String[] args){
         Balanced bal = new Balanced("({[",")}]");
-        System.out.println(bal.testV2("[{[]]]"));
+//        System.out.println(bal.testV2("[{[]}]"));
+      //  System.out.println(bal.testV2("(xx[yy]{ttt})"));
+        System.out.println(bal.testV2("("));
+    //    System.out.println(bal.testV2("(ttttttt]"));
+      //  System.out.println(bal.testV2("(){}{}[({{[{({})}]}})]"));
     }
 
 
