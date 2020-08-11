@@ -14,5 +14,7 @@ public class LLNode<T> {
     public void setInfo(T info){this.info = info;}
     public void setLink(LLNode<T> link){ this.link = link;}
     public LLNode<T> getNode(){return this.link;}
+    @Override
+    public String toString(){ return getInfo().toString();}
 
 }
