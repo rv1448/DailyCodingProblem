@@ -1,7 +1,19 @@
-LIDIAN CALENDER = October 15, 1582
+
+## Notes
+
+> Pass by Value or Pass by reference
+
+#### Pass by Value
+
+#### Pass by reference
+
+## Python 
 
 
-##STACKS
+## Java 
+
+
+## Scala  
 
 
 
